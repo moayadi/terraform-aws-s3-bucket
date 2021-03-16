@@ -29,16 +29,34 @@ Note that this example may create resources which cost money. Run `terraform des
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.6, < 0.14 |
-| aws | >= 3.0, < 4.0 |
+| terraform | >= 0.12.26 |
+| aws | >= 3.0 |
 | random | ~> 2 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | >= 3.0, < 4.0 |
+| aws | >= 3.0 |
 | random | ~> 2 |
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| cloudfront_log_bucket | ../../ |  |
+| log_bucket | ../../ |  |
+| s3_bucket | ../../ |  |
+
+## Resources
+
+| Name |
+|------|
+| [aws_canonical_user_id](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/canonical_user_id) |
+| [aws_iam_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) |
+| [aws_iam_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) |
+| [aws_kms_key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) |
+| [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet) |
 
 ## Inputs
 
@@ -56,5 +74,4 @@ No input.
 | this\_s3\_bucket\_region | The AWS region this bucket resides in. |
 | this\_s3\_bucket\_website\_domain | The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records. |
 | this\_s3\_bucket\_website\_endpoint | The website endpoint, if the bucket is configured with a website. If not, this will be an empty string. |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
